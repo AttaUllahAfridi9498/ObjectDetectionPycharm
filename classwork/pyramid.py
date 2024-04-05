@@ -1,12 +1,12 @@
 
 blocks = int(input("Enter the number of blocks: "))
-height = 0
+heights = 0
 layer_blocks = 1
 while blocks >= layer_blocks:
-    height += 1
+    heights += 1
     blocks -= layer_blocks
     layer_blocks += 1
-print("The height of the pyramid:", height)
+print("The height of the pyramid:", heights)
 
 """
 def calculate_pyramid_height(blocks):
