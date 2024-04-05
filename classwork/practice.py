@@ -1,17 +1,32 @@
-from tkinter.simpledialog import askstring
-from tkinter import *
+import tkinter as tk
+from tkinter import ttk
 
-top = Tk()
-#root = Tk()
-top.geometry("400x200")
+root = tk.Tk()
+frame = ttk.Frame(root)
 
-def show():
-    name = askstring("Input", "Enter you name")
-    print(name)
-#var = StringVar()
-#L = Label(root,textvariable=var, relief=RAISED )
-#var.set("Hey!? How are you doing?")
-B = Button(top, text="Click", command=show)
-B.place(x=50, y=50)
 
-top.mainloop()
+def increment():
+    progressBar.step(20)
+
+
+def decrement():
+    progressBar.step(-20)
+
+
+def display():
+    print(progressBar["value"])
+
+
+progressBar = ttk.Progressbar(frame, mode='determinate')
+progressBar.pack(padx=10, pady=10)
+
+button = ttk.Button(frame, text="Increase", command=increment)
+button.pack(padx=10, pady=10, side=tk.LEFT)
+
+button = ttk.Button(frame, text="Decrease", command=decrement)
+button.pack(padx=10, pady=10, side=tk.LEFT)
+button = ttk.Button(frame, text="Display", command=display)
+button.pack(padx=10, pady=10, side=tk.LEFT)
+
+frame.pack(padx=5, pady=5)
+root.mainloop()
