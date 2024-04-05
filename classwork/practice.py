@@ -20,12 +20,12 @@ def display():
 progressBar = ttk.Progressbar(frame, mode='determinate')
 progressBar.pack(padx=10, pady=10)
 
-button = ttk.Button(frame, text="Increase", command=increment)
+button = ttk.Button(frame, text="IncrementValue", command=increment)
 button.pack(padx=10, pady=10, side=tk.LEFT)
 
-button = ttk.Button(frame, text="Decrease", command=decrement)
+button = ttk.Button(frame, text="DecrementValue", command=decrement)
 button.pack(padx=10, pady=10, side=tk.LEFT)
-button = ttk.Button(frame, text="Display", command=display)
+button = ttk.Button(frame, text="ShowTheResult", command=display)
 button.pack(padx=10, pady=10, side=tk.LEFT)
 
 frame.pack(padx=5, pady=5)
