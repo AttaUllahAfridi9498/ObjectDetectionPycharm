@@ -1,6 +1,27 @@
 
+def bilalsort():
+    my_list = []
+    swapped = True
+    num = int(input("How many elements do you want to sort: "))
 
+    for i in range(num):
+        val = float(input("Enter a list element: "))
+        my_list.append(val)
 
+    while swapped:
+        swapped = False
+        for i in range(len(my_list) - 1):
+            if my_list[i] > my_list[i + 1]:
+                swapped = True
+                my_list[i], my_list[i + 1] = my_list[i + 1], my_list[i]
 
-print("+",20*"*","+","\n|STUDENT IMS SYSTEM|","\n+",20*"*","+\n")
-print("+",7*"*","+","+",7*"*","+","\n|HOME| \t\t |contact|","\n+",7*"*","+","+",7*"*","+")
+    print("\nSorted:")
+    print(my_list)
+
+while True:
+    print("S. Bubble sort, \n M. MergeSort")
+    choice= input("Enter your choice:")
+    if choice=='s' or 'S':
+        bilalsort()
+    else:
+        exit()
