@@ -1,5 +1,5 @@
 
-def bilalsort():
+def bubblesort():
     my_list = []
     swapped = True
     num = int(input("How many elements do you want to sort: "))
