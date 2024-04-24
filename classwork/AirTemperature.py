@@ -8,7 +8,7 @@ for _ in range(31):
     # Create a new list representing temperature readings for the current day
     # Initialize the list with 24 elements, each initialized to 0.0 (representing the temperature)
     # This list represents 24 hours in a day
-    day_temperatures = [0.0] * 24
+    day_temperatures = [0.0] * 24 # multiply 0.0 with 24
     temperature_matrix.append(day_temperatures)
 
 """
